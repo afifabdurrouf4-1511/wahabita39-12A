@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Piket - XII A Wahabita '39</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS KHUSUS HALAMAN PIKET --- */
+        
+        /* 1. Kotak Tugas (Alert Box) */
+        .tugas-box {
+            background: rgba(11, 15, 25, 0.8);
+            border: 1px solid #00f3ff;
+            border-radius: 15px;
+            padding: 25px;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Efek garis miring background */
+        .tugas-box::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            background: linear-gradient(90deg, #00f3ff, #d6249f);
+        }
+
+        .judul-tugas {
+            font-family: 'Orbitron', sans-serif;
+            color: #ffbd2e; /* Kuning Warning */
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .list-tugas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .list-tugas li {
+            background: rgba(255,255,255,0.05);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid #233554;
+            display: flex;
+            align-items: center;
+            color: #c9d1d9;
+        }
+
+        .list-tugas li .icon { margin-right: 10px; color: #00ff41; font-weight: bold; }
+
+        /* 2. Daftar Nama Piket */
+        .piket-list {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nama-siswa {
+            display: block;
+            background: #0d1117;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 3px solid #233554;
+            color: #fff;
+            font-weight: 500;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .nama-siswa:hover {
+            transform: translateX(5px);
+            background: #1c2538;
+            border-left-width: 5px;
+        }
+
+        /* Warna Border Unik Tiap Hari */
+        .senin .nama-siswa:hover { border-color: #ff5f56; box-shadow: 0 0 10px rgba(255, 95, 86, 0.2); }
+        .selasa .nama-siswa:hover { border-color: #ffbd2e; box-shadow: 0 0 10px rgba(255, 189, 46, 0.2); }
+        .rabu .nama-siswa:hover { border-color: #27c93f; box-shadow: 0 0 10px rgba(39, 201, 63, 0.2); }
+        .kamis .nama-siswa:hover { border-color: #00f3ff; box-shadow: 0 0 10px rgba(0, 243, 255, 0.2); }
+        .jumat .nama-siswa:hover { border-color: #d6249f; box-shadow: 0 0 10px rgba(214, 36, 159, 0.2); }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="menu-container">
+            <a href="index.html" class="btn-3d">HOME</a>
+            <a href="index.html#siswa" class="btn-3d">SISWA</a>
+            <a href="profil.html" class="btn-3d">PROFIL KELAS</a>
+            <a href="jadwal.html" class="btn-3d">JADWAL PELAJARAN</a>
+            <a href="piket.html" class="btn-3d">JADWAL PIKET</a>
+            <a href="info.html" class="btn-3d">INFORMASI PENTING</a>
+        </div>
+    </nav>
+
+    <section id="jadwal-page"> <div class="judul-tengah">
+            <h2>JADWAL PIKET KELAS</h2>
+            <div class="garis-neon"></div>
+        </div>
+
+        <div class="tugas-box">
+            <h3 class="judul-tugas">⚠️ JOB DESCRIPTION</h3>
+            <ul class="list-tugas">
+                <li><span class="icon">✔</span> Membersihkan Lingkungan Kelas</li>
+                <li><span class="icon">✔</span> Mengumpulkan Tugas Mapel</li>
+                <li><span class="icon">✔</span> Mengambil & Mengembalikan Ompreng MBG</li>
+            </ul>
+        </div>
+
+        <div class="jadwal-container">
+            
+            <div class="hari-card">
+                <div class="hari-header senin">SENIN</div>
+                <div class="piket-list senin">
+                    <span class="nama-siswa">Isabella</span>
+                    <span class="nama-siswa">Mutia</span>
+                    <span class="nama-siswa">Narendra</span>
+                    <span class="nama-siswa">Shela</span>
+                    <span class="nama-siswa">Tata</span>
+                    <span class="nama-siswa">Ratri</span>
+                    <span class="nama-siswa">Nesa</span>
+                </div>
+            </div>
+
+            <div class="hari-card">
+                <div class="hari-header selasa">SELASA</div>
+                <div class="piket-list selasa">
+                    <span class="nama-siswa">Alvin</span>
+                    <span class="nama-siswa">Inggrit</span>
+                    <span class="nama-siswa">Farariza</span>
+                    <span class="nama-siswa">Moreta</span>
+                    <span class="nama-siswa">Zaqi</span>
+                    <span class="nama-siswa">Afif</span>
+                    <span class="nama-siswa">Tiraini</span>
+                </div>
+            </div>
+
+            <div class="hari-card">
+                <div class="hari-header rabu">RABU</div>
+                <div class="piket-list rabu">
+                    <span class="nama-siswa">Hanafi</span>
+                    <span class="nama-siswa">Nabila</span>
+                    <span class="nama-siswa">Amalia</span>
+                    <span class="nama-siswa">Hary</span>
+                    <span class="nama-siswa">Tika</span>
+                    <span class="nama-siswa">Milan</span>
+                    <span class="nama-siswa">Nita</span>
+                </div>
+            </div>
+
+            <div class="hari-card">
+                <div class="hari-header kamis">KAMIS</div>
+                <div class="piket-list kamis">
+                    <span class="nama-siswa">Tiara</span>
+                    <span class="nama-siswa">Damar S</span>
+                    <span class="nama-siswa">Regita</span>
+                    <span class="nama-siswa">Sarah</span>
+                    <span class="nama-siswa">Hogan</span>
+                    <span class="nama-siswa">Retha</span>
+                    <span class="nama-siswa">Belva</span>
+                </div>
+            </div>
+
+            <div class="hari-card">
+                <div class="hari-header jumat">JUMAT</div>
+                <div class="piket-list jumat">
+                    <span class="nama-siswa">Dine</span>
+                    <span class="nama-siswa">Amelia</span>
+                    <span class="nama-siswa">Dhamarjati</span>
+                    <span class="nama-siswa">Zarifah</span>
+                    <span class="nama-siswa">Jihan</span>
+                    <span class="nama-siswa">Windi</span>
+                    <span class="nama-siswa">Excel</span>
+                    <span class="nama-siswa">Tri Agustin</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>XII A Wahabita '39</h3>
+            <p>Solidaritas Tanpa Batas, Prestasi Tuntas!</p>
+            <a href="https://www.instagram.com/weavenata.jpg" target="_blank" class="footer-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

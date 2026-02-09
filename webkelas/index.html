@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XII A Wahabita '39</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS TAMBAHAN (QUOTES NEON) */
+        .quotes-container {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
+            margin-bottom: 50px;
+        }
+
+        .quote-box-neon {
+            background: rgba(11, 15, 25, 0.8);
+            border: 1px solid #00f3ff;
+            border-radius: 15px;
+            padding: 25px 40px;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+            animation: glowPulse 3s infinite alternate;
+            backdrop-filter: blur(5px);
+        }
+
+        #quote-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            color: #fff;
+            font-style: italic;
+            margin-bottom: 15px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease-in-out;
+            line-height: 1.6;
+        }
+
+        #quote-author {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            color: #ffbd2e;
+            font-weight: bold;
+            letter-spacing: 2px;
+            display: block;
+            transition: opacity 1s ease-in-out;
+            text-transform: uppercase;
+        }
+
+        @keyframes glowPulse {
+            from { box-shadow: 0 0 10px rgba(0, 243, 255, 0.1); border-color: #00f3ff; }
+            to { box-shadow: 0 0 25px rgba(0, 243, 255, 0.4); border-color: #fff; }
+        }
+
+        @media (max-width: 768px) {
+            .quote-box-neon { padding: 20px; width: 95%; }
+            #quote-text { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="menu-container">
+            <a href="index.html" class="btn-3d">HOME</a>
+            <a href="index.html#siswa" class="btn-3d">SISWA</a>
+            <a href="profil.html" class="btn-3d">PROFIL KELAS</a>
+            <a href="jadwal.html" class="btn-3d">JADWAL PELAJARAN</a>
+            <a href="piket.html" class="btn-3d">JADWAL PIKET</a>
+            <a href="info.html" class="btn-3d">INFORMASI PENTING</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="hero-text">
+            <h1>XII A WAHABITA '39</h1>
+            <p class="slogan">Solidaritas Tanpa Batas, Prestasi Tuntas!</p>
+        </div>
+        
+        <div class="running-text-box">
+            <marquee direction="left" scrollamount="8">
+                Selamat Datang di Website Resmi Kelas XII A Wahabita 39 (MIPA-INFORMATIKA) — Solidaritas Tanpa Batas, Prestasi Tuntas! -Wahabita Jaya!!!-
+            </marquee>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-box"><span class="angka">36</span><span class="label">TOTAL SISWA</span></div>
+            <div class="stat-box"><span class="angka">11</span><span class="label">LAKI-LAKI</span></div>
+            <div class="stat-box"><span class="angka">25</span><span class="label">PEREMPUAN</span></div>
+        </div>
+
+        <div class="medsos-container">
+            <a href="https://www.instagram.com/weavenata.jpg" target="_blank" class="btn-ig-besar">
+                FOLLOW @weavenata.jpg
+            </a>
+        </div>
+
+        <div class="quotes-container">
+            <div class="quote-box-neon">
+                <p id="quote-text">"Bermimpilah setinggi langit. Jika engkau jatuh, engkau akan jatuh di antara bintang-bintang."</p>
+                <span id="quote-author">- Ir. Soekarno -</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="siswa">
+        <div class="judul-tengah">
+            <h2>DAFTAR ANGGOTA KELAS XII A</h2>
+            <div class="garis-neon"></div>
+        </div>
+
+        <div class="slider-wrapper">
+            <button class="nav-btn prev" onclick="geserKiri()">&#10094;</button>
+            
+            <div class="siswa-slider" id="sliderContainer">
+                
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/adine.jpeg" alt="Adine"></div>
+                    <div class="content-box"><h3>ADINE FAIQ RIZQULLAH</h3><a href="https://www.instagram.com/adinefaiq/?utm_source=ig_web_button_share_sheet" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/afif.jpeg" alt="Afif"></div>
+                    <div class="content-box"><h3>AFIF ABDURRO'UF</h3><a href="https://www.instagram.com/afifabdurrouf4?igsh=aXNmMDhldGE1eGxp" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/ahmad.jpeg" alt="Ahmad"></div>
+                    <div class="content-box"><h3>AHMAD RAAFI EXCEL</h3><a href="https://www.instagram.com/e_x_c____?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/amalia.jpeg" alt="Amalia"></div>
+                    <div class="content-box"><h3>AMALIA AYUNINGTYAS SUBRATA</h3><a href="https://www.instagram.com/aamltys?igsh=MXRxazJseThkcWR1dQ==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/amelia.jpeg" alt="Amelia"></div>
+                    <div class="content-box"><h3>AMELIA SAFITRI</h3><a href="https://www.instagram.com/lilymelya?igsh=MTRsaWExd3NzMzd6dw==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/ananda.jpeg" alt="Ananda"></div>
+                    <div class="content-box"><h3>ANANDA TIKA MAHARANI</h3><a href="https://www.instagram.com/_annndatika?igsh=NDl5bTI3MDd0eDl6" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/belva.jpeg" alt="Belva"></div>
+                    <div class="content-box"><h3>BELVA MUTIARA SHAFA</h3><a href="https://www.instagram.com/belvahudaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/claudia.jpeg" alt="Claudia"></div>
+                    <div class="content-box"><h3>CLAUDIA MORETA</h3><a href="https://www.instagram.com/cldaaa_?utm_source=qr&igsh=anh6bnF0Z2RtdGVj" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/damar.jpeg" alt="Damar"></div>
+                    <div class="content-box"><h3>DAMAR SATWIKA JATI</h3><a href="https://www.instagram.com/damarstwka?igsh=MWR4cDlyMjdkNWVqYw==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/dhamarjati.jpeg" alt="Dhamarjati"></div>
+                    <div class="content-box"><h3>DHAMARJATI WISJNUTAMA</h3><a href="https://www.instagram.com/dhamar7243/?utm_source=ig_web_button_share_sheet" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/farariza.jpeg" alt="Farariza"></div>
+                    <div class="content-box"><h3>FARARIZA NUR SURYA NAJWA</h3><a href="https://www.instagram.com/fra.ayaa_?igsh=cGpnbjByd254eDkx" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/farisha.jpeg" alt="Farisha"></div>
+                    <div class="content-box"><h3>FARISHA ALVIN SANJAYA</h3><a href="https://www.instagram.com/farishaasnjyaa_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/hary.jpeg" alt="Hary"></div>
+                    <div class="content-box"><h3>HARY ZUDHANTO</h3><a href="https://www.instagram.com/hryzdhn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/hogan.jpeg" alt="Hogan"></div>
+                    <div class="content-box"><h3>HOGAN EDRA PERMANA</h3><a href="https://www.instagram.com/hganedra?igsh=dnR5YzFocWlnbjZ1" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/inggrit.jpeg" alt="Inggrit"></div>
+                    <div class="content-box"><h3>INGGRIT GIOVANI</h3><a href="https://www.instagram.com/inggrit.gvn?igsh=MXd2emd0eGFhZWFnOQ%3D%3D&utm_source=qr" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/jihan.jpeg" alt="Jihan"></div>
+                    <div class="content-box"><h3>JIHAN NADYA SALMA</h3><a href="https://www.instagram.com/jianxy_26?igsh=MTE5Y2ZldHM0YmgxNg==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/keyshela.jpeg" alt="Keyshela"></div>
+                    <div class="content-box"><h3>KEYSHELA PUTRI ZAELANI</h3><a href="https://www.instagram.com/kyshlaaa_?igsh=bWp2ZHQ2NnE5MzM3" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/kuswatun.jpeg" alt="Kuswatun"></div>
+                    <div class="content-box"><h3>KUSWATUN SARAH FADILAH</h3><a href="https://www.instagram.com/sarahzyz__?igsh=MTAzb21id3puZmxl" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/lauly.jpeg" alt="Lauly"></div>
+                    <div class="content-box"><h3>LAULY JOYRETHA SETYANJANI</h3><a href="https://www.instagram.com/laulire.ta?igsh=MXNiNmw1M2N4NTNxOA==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/muhammad.jpeg" alt="Muhammad"></div>
+                    <div class="content-box"><h3>MUHAMMAD HANAFI</h3><a href="https://www.instagram.com/_hnf_14/" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/mutia.jpeg" alt="Mutia"></div>
+                    <div class="content-box"><h3>MUTIA REFA ADELLIA</h3><a href="https://www.instagram.com/mutiarefa_?igsh=MWtpaXowamRxcDlkYg==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/mutiara.jpeg" alt="Mutiara"></div>
+                    <div class="content-box"><h3>MUTIARA RAMADANI</h3><a href="https://www.instagram.com/mutiararamaaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/nabilah.jpeg" alt="Nabilah"></div>
+                    <div class="content-box"><h3>NABIILAH AYU DHIYAA SYAHLAA</h3><a href="#" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/narendra.jpeg" alt="Narendra"></div>
+                    <div class="content-box"><h3>NARENDRA WAHYU ARI SAPUTRA</h3><a href="https://www.instagram.com/synarendra?igsh=dnljbnhrdnpicXNl" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/nathalia.jpeg" alt="Nathalia"></div>
+                    <div class="content-box"><h3>NATHALIA EKA ISABELLA</h3><a href="https://www.instagram.com/nathlysblla?igsh=MWwzeGhxbHdnMnZmYg==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/nesa.jpeg" alt="Nesa"></div>
+                    <div class="content-box"><h3>NESA OVY ARDINI</h3><a href="https://www.instagram.com/nesaovyard?igsh=MWV2eGJpazJvcGQ4Yw%3D%3D&utm_source=qr" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/ratri.jpeg" alt="Ratri"></div>
+                    <div class="content-box"><h3>RATRI CAHYO NINGSIH</h3><a href="https://www.instagram.com/rrtyyyh._?igsh=cXNqeXh6M29mbzcw" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/regita.jpeg" alt="Regita"></div>
+                    <div class="content-box"><h3>REGITA BERYL WARANGGANI</h3><a href="https://www.instagram.com/regitaberyl?igsh=MW1zZ3kzNzRxNWlkOQ==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/ruqoyah.jpeg" alt="Ruqoyah"></div>
+                    <div class="content-box"><h3>RUQOYAH AL-QONITAH</h3><a href="#" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/tata.jpeg" alt="Tata"></div>
+                    <div class="content-box"><h3>TATA ALIF PRATAMA</h3><a href="https://www.instagram.com/tataalifpratamaa?igsh=MTQ3c2IwanM5Nzdoag%3D%3D&utm_source=qr" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/tiraini.jpeg" alt="Tiraini"></div>
+                    <div class="content-box"><h3>TIRAINI AYU RACHMADEVI</h3><a href="#" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/tri.jpeg" alt="Tri"></div>
+                    <div class="content-box"><h3>TRI AGUSTIN PRIANDINI</h3><a href="https://www.instagram.com/luvleyti4_?igsh=MXE2dTJycmJ0MGs0YQ==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/windi.jpeg" alt="Windi"></div>
+                    <div class="content-box"><h3>WINDI RACHMA ALLISA</h3><a href="https://www.instagram.com/aaaallisaa/?utm_source=ig_web_button_share_sheet" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/zaqi.jpeg" alt="Zaqi"></div>
+                    <div class="content-box"><h3>ZAQI MAULANA SUJARWO</h3><a href="https://www.instagram.com/_zaqimaulana_?igsh=MWJlbzRqOHFuYXFsMA==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/zarifah.jpeg" alt="Zarifah"></div>
+                    <div class="content-box"><h3>ZARIFAH YAFI IFATINAH</h3><a href="https://www.instagram.com/whiteblushmystery/" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+                <div class="siswa-card">
+                    <div class="img-box"><img src="img/zhagifa.jpeg" alt="Zhagifa"></div>
+                    <div class="content-box"><h3>ZHAGIFA MILAN ROSSELA</h3><a href="https://www.instagram.com/zhagifamilan?igsh=MTZmOXUyaXVjcTBrNw==" target="_blank" class="btn-ig-small">Follow</a></div>
+                </div>
+
+            </div> 
+            <button class="nav-btn next" onclick="geserKanan()">&#10095;</button>
+        </div> 
+    </section>
+
+    <section id="galeri">
+        <div class="judul-tengah">
+            <h2>MEMORI KELAS</h2>
+            <div class="garis-neon"></div>
+            <p style="color:#8892b0; margin-top:10px; font-size:0.9rem;">Momen seru, aib, dan kenangan kita.</p>
+            
+            <a href="https://forms.gle/GrpGg1aYG6nDTtMz7" target="_blank" class="btn-upload">
+                📷 Upload Fotomu Di Sini
+            </a>
+        </div>
+
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <div class="photo-card"><img src="img/galeri1.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri2.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri3.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri4.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri5.jpg" alt="Memori"></div>
+                
+                <div class="photo-card"><img src="img/galeri1.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri2.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri3.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri4.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri5.jpg" alt="Memori"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>XII A Wahabita '39</h3>
+            <p>Solidaritas Tanpa Batas, Prestasi Tuntas!</p>
+            <a href="https://www.instagram.com/weavenata.jpg" target="_blank" class="footer-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const sliderContainer = document.getElementById('sliderContainer');
+
+        // Fungsi Manual (Tombol Panah)
+        function geserKanan() {
+            sliderContainer.scrollBy({ left: 300, behavior: 'smooth' });
+        }
+        function geserKiri() {
+            sliderContainer.scrollBy({ left: -300, behavior: 'smooth' });
+        }
+
+        // --- 1. OTOMATIS SLIDER SISWA (Tiap 3 Detik) ---
+        function autoScrollSiswa() {
+            // Jika sudah mentok kanan, balik ke awal
+            if (sliderContainer.scrollLeft + sliderContainer.clientWidth >= sliderContainer.scrollWidth) {
+                sliderContainer.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                sliderContainer.scrollBy({ left: 300, behavior: 'smooth' });
+            }
+        }
+
+        // Jalankan interval
+        let siswaInterval = setInterval(autoScrollSiswa, 3000);
+
+        // PAUSE saat Mouse Hover (Agar bisa klik follow)
+        sliderContainer.addEventListener('mouseenter', () => {
+            clearInterval(siswaInterval);
+        });
+
+        // RESUME saat Mouse Pergi
+        sliderContainer.addEventListener('mouseleave', () => {
+            siswaInterval = setInterval(autoScrollSiswa, 3000);
+        });
+
+
+        // --- 2. OTOMATIS QUOTES (Tiap 10 Detik) ---
+        const quotes = [
+            { text: "Bermimpilah setinggi langit. Jika engkau jatuh, engkau akan jatuh di antara bintang-bintang.", author: "Ir. Soekarno" },
+            { text: "Keberhasilan bukan milik orang pintar. Keberhasilan adalah kepunyaan mereka yang senantiasa berusaha.", author: "B.J. Habibie" },
+            { text: "Terbentur, terbentur, terbentur, terbentuk.", author: "Tan Malaka" },
+            { text: "Barangsiapa ingin mutiara, harus berani terjun di lautan yang dalam.", author: "Ir. Soekarno" },
+            { text: "Orang boleh pandai setinggi langit, tapi selama ia tidak menulis, ia akan hilang di dalam masyarakat dan dari sejarah.", author: "Pramoedya Ananta Toer" },
+            { text: "Jangan pernah lelah mencintai Indonesia.", author: "B.J. Habibie" },
+            { text: "Habis gelap terbitlah terang.", author: "R.A. Kartini" },
+            { text: "Pendidikan adalah senjata paling mematikan di dunia, karena dengan pendidikan, Anda dapat mengubah dunia.", author: "Nelson Mandela" },
+            { text: "Gantungkan cita-citamu setinggi langit! Bermimpilah setinggi langit.", author: "Ir. Soekarno" }
+        ];
+
+        let quoteIndex = 0;
+        const textElement = document.getElementById('quote-text');
+        const authorElement = document.getElementById('quote-author');
+
+        function changeQuote() {
+            textElement.style.opacity = 0;
+            authorElement.style.opacity = 0;
+            setTimeout(() => {
+                quoteIndex = (quoteIndex + 1) % quotes.length;
+                textElement.innerText = '"' + quotes[quoteIndex].text + '"';
+                authorElement.innerText = '- ' + quotes[quoteIndex].author + ' -';
+                textElement.style.opacity = 1;
+                authorElement.style.opacity = 1;
+            }, 1000);
+        }
+        setInterval(changeQuote, 10000); // 10 Detik
+    </script>
+</body>
+</html>
