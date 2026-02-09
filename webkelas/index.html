@@ -291,12 +291,22 @@
                 <div class="photo-card"><img src="img/galeri3.jpg" alt="Memori"></div>
                 <div class="photo-card"><img src="img/galeri4.jpg" alt="Memori"></div>
                 <div class="photo-card"><img src="img/galeri5.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri6.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri7.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri8.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri9.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri10.jpg" alt="Memori"></div>
                 
                 <div class="photo-card"><img src="img/galeri1.jpg" alt="Memori"></div>
                 <div class="photo-card"><img src="img/galeri2.jpg" alt="Memori"></div>
                 <div class="photo-card"><img src="img/galeri3.jpg" alt="Memori"></div>
                 <div class="photo-card"><img src="img/galeri4.jpg" alt="Memori"></div>
                 <div class="photo-card"><img src="img/galeri5.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri6.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri7.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri8.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri9.jpg" alt="Memori"></div>
+                <div class="photo-card"><img src="img/galeri10.jpg" alt="Memori"></div>
             </div>
         </div>
     </section>
@@ -314,7 +324,7 @@
     <script>
         const sliderContainer = document.getElementById('sliderContainer');
 
-        // Fungsi Manual (Tombol Panah)
+        // Fungsi Manual
         function geserKanan() {
             sliderContainer.scrollBy({ left: 300, behavior: 'smooth' });
         }
@@ -324,7 +334,6 @@
 
         // --- 1. OTOMATIS SLIDER SISWA (Tiap 3 Detik) ---
         function autoScrollSiswa() {
-            // Jika sudah mentok kanan, balik ke awal
             if (sliderContainer.scrollLeft + sliderContainer.clientWidth >= sliderContainer.scrollWidth) {
                 sliderContainer.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
@@ -332,10 +341,9 @@
             }
         }
 
-        // Jalankan interval
         let siswaInterval = setInterval(autoScrollSiswa, 3000);
 
-        // PAUSE saat Mouse Hover (Agar bisa klik follow)
+        // PAUSE saat Mouse Hover
         sliderContainer.addEventListener('mouseenter', () => {
             clearInterval(siswaInterval);
         });
@@ -344,7 +352,6 @@
         sliderContainer.addEventListener('mouseleave', () => {
             siswaInterval = setInterval(autoScrollSiswa, 3000);
         });
-
 
         // --- 2. OTOMATIS QUOTES (Tiap 10 Detik) ---
         const quotes = [
@@ -374,7 +381,7 @@
                 authorElement.style.opacity = 1;
             }, 1000);
         }
-        setInterval(changeQuote, 10000); // 10 Detik
+        setInterval(changeQuote, 10000); 
     </script>
 </body>
 </html>
