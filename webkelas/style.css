@@ -1,5 +1,5 @@
 /* =========================================
-   STYLE.CSS - VERSI PEMULIHAN (FIXED ALL)
+   STYLE.CSS - VERSI FINAL UPDATE JADWAL 2026
    ========================================= */
 
 /* 1. RESET & GLOBAL */
@@ -11,42 +11,21 @@ body {
     overflow-x: hidden; 
 }
 
-/* 2. NAVIGASI (DIPERBAIKI) */
+/* 2. NAVIGASI */
 nav { 
-    background: #151b2b; 
-    padding: 15px 0; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
-    border-bottom: 3px solid #00f3ff; 
+    background: #151b2b; padding: 15px 0; position: sticky; 
+    top: 0; z-index: 1000; border-bottom: 3px solid #00f3ff; 
 }
-
 .menu-container { 
-    display: flex; 
-    justify-content: center; 
-    gap: 10px; 
-    flex-wrap: wrap; 
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex; justify-content: center; gap: 10px; 
+    flex-wrap: wrap; width: 100%; max-width: 1200px; margin: 0 auto;
 }
-
 .btn-3d { 
-    text-decoration: none; 
-    font-weight: 800; 
-    font-family: 'Orbitron', sans-serif; 
-    font-size: 0.85rem; 
-    color: #0b0f19; 
-    background: #00f3ff; 
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    border-bottom: 4px solid #0099a1; 
-    transition: 0.1s; 
-    display: flex;             
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 5px;
+    text-decoration: none; font-weight: 800; font-family: 'Orbitron', sans-serif; 
+    font-size: 0.85rem; color: #0b0f19; background: #00f3ff; 
+    padding: 10px 20px; border-radius: 5px; border-bottom: 4px solid #0099a1; 
+    transition: 0.1s; display: flex; align-items: center; justify-content: center; 
+    text-align: center; margin: 5px;
 }
 .btn-3d:active { transform: translateY(3px); border-bottom: 1px solid #0099a1; }
 .btn-3d:hover { background: #ccfcff; box-shadow: 0 0 10px #00f3ff; }
@@ -54,10 +33,8 @@ nav {
 
 /* 3. HOME SECTION */
 #home { 
-    min-height: 100vh; 
-    display: flex; flex-direction: column; align-items: center; 
-    padding: 40px 10px; 
-    background: radial-gradient(circle at center, #112240 0%, #050a14 100%); 
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center; 
+    padding: 40px 10px; background: radial-gradient(circle at center, #112240 0%, #050a14 100%); 
 }
 .hero-text { text-align: center; margin-bottom: 20px; }
 #home h1 { 
@@ -65,23 +42,19 @@ nav {
     text-shadow: 0 0 15px rgba(0, 243, 255, 0.6); line-height: 1.2;
 }
 .slogan { font-size: 1rem; color: #aebbc9; margin-top: 10px; display: block; letter-spacing: 1px; }
-
 .running-text-box { 
     width: 95%; max-width: 800px; background: #000; border: 1px solid #00f3ff; 
     color: #00ff41; font-family: 'Orbitron', monospace; padding: 10px; 
     margin-bottom: 30px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
 }
-
 .stats-container { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; }
 .stat-box { 
     background: rgba(21, 27, 43, 0.8); border: 2px solid #233554; 
-    width: 150px; padding: 15px; text-align: center; border-radius: 10px; 
-    transition: 0.3s;
+    width: 150px; padding: 15px; text-align: center; border-radius: 10px; transition: 0.3s;
 }
 .stat-box:hover { transform: translateY(-5px); border-color: #00f3ff; }
 .angka { display: block; font-size: 2.5rem; font-weight: bold; font-family: 'Orbitron', sans-serif; color: #fff; }
 .label { font-size: 0.7rem; color: #8892b0; font-weight: bold; letter-spacing: 1px; }
-
 .btn-ig-besar { 
     display: inline-block; padding: 15px 40px; 
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
@@ -103,43 +76,27 @@ nav {
     width: 100px; height: 4px; background: #d6249f; margin: 15px auto 0; 
     border-radius: 5px; box-shadow: 0 0 10px #d6249f; 
 }
-
 .slider-wrapper { display: flex; align-items: center; position: relative; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
 .nav-btn { background: none; border: none; font-size: 3rem; color: #00f3ff; cursor: pointer; z-index: 10; transition: 0.3s; }
-.nav-btn:hover { color: #fff; text-shadow: 0 0 10px #00f3ff; }
-
-.siswa-slider { 
-    display: flex; gap: 20px; overflow-x: auto; scroll-behavior: smooth; 
-    width: 100%; padding: 20px 5px; 
-}
-.siswa-slider::-webkit-scrollbar { height: 8px; }
-.siswa-slider::-webkit-scrollbar-track { background: #0b0f19; }
-.siswa-slider::-webkit-scrollbar-thumb { background: #233554; border-radius: 10px; }
-
+.siswa-slider { display: flex; gap: 20px; overflow-x: auto; scroll-behavior: smooth; width: 100%; padding: 20px 5px; }
 .siswa-card { 
     flex: 0 0 220px; background: #161b22; border-radius: 15px; text-align: center; 
     padding: 30px 15px; border: 1px solid #233554; height: 360px; 
-    display: flex; flex-direction: column; align-items: center; 
-    transition: 0.3s; position: relative; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; transition: 0.3s; position: relative; overflow: hidden;
 }
-.siswa-card:hover { transform: translateY(-10px); border-color: #00f3ff; box-shadow: 0 0 20px rgba(0, 243, 255, 0.2); }
 .img-box { width: 120px; height: 120px; margin: 0 auto 15px; border-radius: 50%; padding: 3px; border: 2px dashed #00f3ff; overflow: hidden; }
 .img-box img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
 .content-box { width: 100%; z-index: 2; position: relative; }
 .content-box h3 { color: #fff; font-weight: 600; font-size: 0.9rem; height: 50px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
 .btn-ig-small { display: inline-block; padding: 8px 25px; background: #0b0f19; color: #fff; border: 1px solid #00f3ff; border-radius: 20px; text-decoration: none; font-size: 0.8rem; transition: 0.3s; position: relative; z-index: 10; cursor: pointer; }
-.btn-ig-small:hover { background: #00f3ff; color: #000; font-weight: bold; }
 
-/* 5. JADWAL PELAJARAN (PERBAIKAN TOTAL: FLEXBOX RAPI) */
+/* 5. JADWAL PELAJARAN */
 #jadwal-page { padding: 40px 10px; background-color: #0b0f19; min-height: 100vh; }
 .sub-judul { color: #8892b0; font-size: 0.9rem; margin-bottom: 30px; display: block; text-align: center; }
 
 .jadwal-container { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 25px; 
-    max-width: 1300px; 
-    margin: 0 auto; 
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 25px; max-width: 1400px; margin: 0 auto; 
 }
 .hari-card { 
     background: #161b22; border-radius: 12px; border: 1px solid #233554; 
@@ -148,60 +105,72 @@ nav {
 .hari-card:hover { border-color: #00f3ff; transform: translateY(-5px); }
 .hari-header { 
     padding: 15px; text-align: center; font-family: 'Orbitron', sans-serif; 
-    font-weight: 800; color: #0b0f19; font-size: 1.2rem; 
-    letter-spacing: 2px; border-bottom: 2px solid rgba(0,0,0,0.2);
+    font-weight: 800; color: #0b0f19; font-size: 1.2rem; letter-spacing: 2px;
 }
 .senin { background: #ff5f56; } .selasa { background: #ffbd2e; } .rabu { background: #27c93f; } .kamis { background: #00f3ff; } .jumat { background: #d6249f; }
 
+/* TABLE HEADER */
+.table-header {
+    display: grid;
+    grid-template-columns: 35px 95px 1fr; /* Kolom: No, Waktu, Mapel */
+    padding: 10px;
+    background: rgba(0,0,0,0.2);
+    font-size: 0.75rem;
+    color: #8892b0;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #233554;
+}
+
 /* ISI JADWAL ITEM */
 .item { 
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 12px 15px; border-bottom: 1px dashed #233554; 
+    display: grid; 
+    grid-template-columns: 35px 95px 1fr; /* SAMA DENGAN HEADER */
+    align-items: center;
+    padding: 8px 10px; /* Padding diperkecil biar muat banyak */
+    border-bottom: 1px dashed #233554; 
 }
 .item:last-child { border-bottom: none; }
-.waktu { 
-    color: #00f3ff; font-family: 'Consolas', monospace; font-size: 0.9rem; 
-    background: rgba(0, 243, 255, 0.1); padding: 2px 6px; border-radius: 4px;
-}
-.mapel { color: #fff; font-weight: 700; text-align: right; font-size: 0.95rem; }
 
-/* ISTIRAHAT */
+.no-jam {
+    text-align: center; color: #8892b0; font-weight: bold; font-family: 'Orbitron', sans-serif; font-size: 0.8rem;
+}
+.waktu { 
+    text-align: center; color: #00f3ff; font-family: 'Consolas', monospace; 
+    font-size: 0.8rem; background: rgba(0, 243, 255, 0.1); 
+    padding: 2px 0; border-radius: 4px;
+}
+.mapel { color: #fff; font-weight: 600; text-align: right; font-size: 0.85rem; padding-left: 5px; }
+
+/* ISTIRAHAT & KEGIATAN KHUSUS */
 .item.istirahat { 
-    background: rgba(255, 189, 46, 0.15); justify-content: center; 
-    padding: 10px; border-bottom: 1px solid #233554;
+    display: flex; justify-content: center; 
+    background: rgba(255, 189, 46, 0.15); 
+    padding: 8px; border-bottom: 1px solid #233554;
 }
 .text-istirahat {
     color: #ffbd2e; font-weight: 800; font-style: normal; 
-    font-family: 'Orbitron', sans-serif; font-size: 0.85rem; letter-spacing: 1px;
+    font-family: 'Orbitron', sans-serif; font-size: 0.8rem; letter-spacing: 1px;
 }
 
-/* 6. GALERI */
+/* 6. GALERI & FOOTER */
 #galeri { padding: 50px 0; background: #0b0f19; overflow: hidden; border-top: 1px solid #1c2538; }
 .btn-upload { display: inline-block; margin-top: 15px; padding: 8px 25px; border: 1px solid #ffbd2e; color: #ffbd2e; text-decoration: none; border-radius: 20px; font-size: 0.9rem; transition: 0.3s; }
-.btn-upload:hover { background: #ffbd2e; color: #000; font-weight: bold; }
-.marquee-container { margin-top: 40px; width: 100%; overflow: hidden; position: relative; padding: 30px 0; background: rgba(255, 255, 255, 0.02); border-top: 1px solid #233554; border-bottom: 1px solid #233554; }
+.marquee-container { margin-top: 40px; width: 100%; overflow: hidden; padding: 30px 0; background: rgba(255, 255, 255, 0.02); border-top: 1px solid #233554; border-bottom: 1px solid #233554; }
 .marquee-content { display: flex; gap: 20px; width: max-content; animation: scrollLeft 40s linear infinite; }
-.marquee-content:hover { animation-play-state: paused; }
 @keyframes scrollLeft { to { transform: translateX(-50%); } }
-.photo-card { width: 300px; height: 200px; flex-shrink: 0; border-radius: 10px; overflow: hidden; border: 2px solid #233554; position: relative; transition: 0.3s; }
+.photo-card { width: 300px; height: 200px; flex-shrink: 0; border-radius: 10px; overflow: hidden; border: 2px solid #233554; }
 .photo-card img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(40%) contrast(110%) brightness(0.8); transition: 0.5s; }
-.photo-card:hover { transform: scale(1.05); border-color: #00f3ff; z-index: 10; box-shadow: 0 0 20px rgba(0, 243, 255, 0.5); }
-.photo-card:hover img { filter: none; }
-
-/* 7. FOOTER */
 footer { background-color: #05080f; padding: 50px 20px; margin-top: 0; text-align: center; border-top: 1px solid #1c2538; }
 .footer-content h3 { color: #00f3ff; font-family: 'Orbitron', sans-serif; margin-bottom: 10px; font-size: 1.5rem; }
 .footer-content p { color: #8892b0; margin-bottom: 20px; }
-.footer-icon { color: #fff; transition: 0.3s; display: inline-block; }
-.footer-icon:hover { color: #d6249f; transform: scale(1.2); }
+.footer-icon { color: #fff; display: inline-block; }
 
-/* 8. MOBILE RESPONSIVE */
 @media (max-width: 768px) {
     nav .menu-container { flex-wrap: wrap !important; justify-content: center !important; gap: 8px !important; }
     .btn-3d { flex: 1 1 40% !important; margin: 0 !important; font-size: 0.75rem !important; }
     #home h1 { font-size: 1.8rem; }
     .judul-tengah h2 { font-size: 1.6rem; }
-    .col-jam { font-size: 0.7rem; }
-    .photo-card { width: 220px; height: 150px; }
-    .quote-box-neon { padding: 15px; margin-bottom: 30px; }
+    .table-header { font-size: 0.7rem; } 
+    .waktu { font-size: 0.75rem; }
 }
