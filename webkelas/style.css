@@ -1,5 +1,5 @@
 /* =========================================
-   STYLE.CSS - VERSI FINAL (LENGKAP)
+   STYLE.CSS - VERSI FINAL (FIX JADWAL TEGAK)
    ========================================= */
 
 /* 1. RESET & GLOBAL */
@@ -161,17 +161,67 @@ nav {
 .cursor { display: inline-block; width: 10px; height: 18px; background: #c9d1d9; animation: blink 1s infinite; vertical-align: middle; }
 @keyframes blink { 50% { opacity: 0; } }
 
-/* 6. JADWAL PELAJARAN */
-.jadwal-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1300px; margin: 0 auto; }
-.hari-card { background: #161b22; border-radius: 15px; border: 1px solid #233554; overflow: hidden; transition: 0.3s; }
-.hari-card:hover { transform: translateY(-5px); border-color: #d6249f; }
-.hari-header { padding: 15px; text-align: center; font-family: 'Orbitron', sans-serif; font-weight: bold; color: #0b0f19; font-size: 1.2rem; }
-.senin { background: #ff5f56; } .selasa { background: #ffbd2e; } .rabu { background: #27c93f; } .kamis { background: #00f3ff; } .jumat { background: #d6249f; }
-.item { display: flex; justify-content: space-between; padding: 12px 15px; border-bottom: 1px dashed #233554; font-size: 0.9rem; }
-.item:last-child { border-bottom: none; }
-.item span { color: #8892b0; font-family: monospace; }
-.item strong { color: #fff; text-align: right; }
-.item.istirahat { background: rgba(255,255,255,0.05); justify-content: center; font-style: italic; color: #ffbd2e; }
+/* 6. JADWAL PELAJARAN (TABEL STYLE) */
+#jadwal-page { padding: 40px 10px; background-color: #0b0f19; min-height: 100vh; }
+.sub-judul { color: #8892b0; font-size: 0.9rem; margin-bottom: 30px; display: block; text-align: center; }
+
+.jadwal-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+}
+
+.hari-card { 
+    background: #161b22; 
+    border-radius: 10px; 
+    border: 1px solid #233554; 
+    overflow: hidden; 
+    transition: 0.3s; 
+}
+.hari-card:hover { border-color: #00f3ff; transform: translateY(-5px); }
+
+.hari-header { 
+    padding: 15px; 
+    text-align: center; 
+    font-family: 'Orbitron', sans-serif; 
+    font-weight: 800; 
+    color: #0b0f19; 
+    font-size: 1.1rem; 
+    letter-spacing: 2px;
+}
+
+/* WARNA HEADER HARI */
+.senin { background: #ff5f56; } 
+.selasa { background: #ffbd2e; } 
+.rabu { background: #27c93f; } 
+.kamis { background: #00f3ff; } 
+.jumat { background: #d6249f; }
+
+/* TABEL DALAM KARTU */
+.tabel-jadwal { width: 100%; border-collapse: collapse; }
+.tabel-jadwal tr { border-bottom: 1px solid #233554; }
+.tabel-jadwal tr:last-child { border-bottom: none; }
+
+.col-jam { width: 10%; padding: 12px 5px; text-align: center; color: #8892b0; font-size: 0.8rem; }
+.col-waktu { width: 35%; padding: 12px 5px; text-align: center; color: #00f3ff; font-family: monospace; font-size: 0.85rem; }
+.col-mapel { width: 55%; padding: 12px 10px; text-align: right; color: #fff; font-weight: 600; font-size: 0.9rem; }
+
+/* BARIS ISTIRAHAT (TEGAK / TIDAK MIRING) */
+.row-istirahat { 
+    background: rgba(255, 189, 46, 0.1); 
+}
+.row-istirahat td {
+    padding: 10px;
+    text-align: center;
+    color: #ffbd2e; 
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    font-style: normal; /* Normal = Tidak Miring */
+    font-size: 0.85rem;
+}
 
 /* 7. GALERI (FILM STRIP) */
 #galeri { padding: 50px 0; background: #0b0f19; overflow: hidden; border-top: 1px solid #1c2538; }
@@ -237,6 +287,11 @@ footer { background-color: #05080f; padding: 50px 20px; margin-top: 0; text-alig
     .mentor-grid { flex-direction: column; align-items: center; }
     .mentor-card { width: 100%; max-width: 350px; }
     
+    /* JADWAL DI HP */
+    .col-jam { font-size: 0.7rem; }
+    .col-waktu { font-size: 0.75rem; }
+    .col-mapel { font-size: 0.8rem; }
+
     /* GALERI */
     .photo-card { width: 220px; height: 150px; }
     
