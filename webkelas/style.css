@@ -1,176 +1,81 @@
 /* =========================================
-   STYLE.CSS - VERSI FINAL UPDATE JADWAL 2026
+   STYLE KHUSUS PROFIL KELAS (TERMINAL)
    ========================================= */
+#profil-page { padding: 40px 20px; min-height: 100vh; background: #0b0f19; }
 
-/* 1. RESET & GLOBAL */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { 
-    background-color: #0b0f19; 
-    color: #ffffff; 
-    font-family: 'Poppins', sans-serif; 
-    overflow-x: hidden; 
+.terminal-container {
+    display: flex; justify-content: center; padding-top: 20px;
 }
 
-/* 2. NAVIGASI */
-nav { 
-    background: #151b2b; padding: 15px 0; position: sticky; 
-    top: 0; z-index: 1000; border-bottom: 3px solid #00f3ff; 
-}
-.menu-container { 
-    display: flex; justify-content: center; gap: 10px; 
-    flex-wrap: wrap; width: 100%; max-width: 1200px; margin: 0 auto;
-}
-.btn-3d { 
-    text-decoration: none; font-weight: 800; font-family: 'Orbitron', sans-serif; 
-    font-size: 0.85rem; color: #0b0f19; background: #00f3ff; 
-    padding: 10px 20px; border-radius: 5px; border-bottom: 4px solid #0099a1; 
-    transition: 0.1s; display: flex; align-items: center; justify-content: center; 
-    text-align: center; margin: 5px;
-}
-.btn-3d:active { transform: translateY(3px); border-bottom: 1px solid #0099a1; }
-.btn-3d:hover { background: #ccfcff; box-shadow: 0 0 10px #00f3ff; }
-.btn-3d.active { background: #d6249f; color: #fff; border-bottom: 4px solid #8e1a6a; }
-
-/* 3. HOME SECTION */
-#home { 
-    min-height: 100vh; display: flex; flex-direction: column; align-items: center; 
-    padding: 40px 10px; background: radial-gradient(circle at center, #112240 0%, #050a14 100%); 
-}
-.hero-text { text-align: center; margin-bottom: 20px; }
-#home h1 { 
-    font-family: 'Orbitron', sans-serif; font-size: 2.8rem; color: #00f3ff; 
-    text-shadow: 0 0 15px rgba(0, 243, 255, 0.6); line-height: 1.2;
-}
-.slogan { font-size: 1rem; color: #aebbc9; margin-top: 10px; display: block; letter-spacing: 1px; }
-.running-text-box { 
-    width: 95%; max-width: 800px; background: #000; border: 1px solid #00f3ff; 
-    color: #00ff41; font-family: 'Orbitron', monospace; padding: 10px; 
-    margin-bottom: 30px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
-}
-.stats-container { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; }
-.stat-box { 
-    background: rgba(21, 27, 43, 0.8); border: 2px solid #233554; 
-    width: 150px; padding: 15px; text-align: center; border-radius: 10px; transition: 0.3s;
-}
-.stat-box:hover { transform: translateY(-5px); border-color: #00f3ff; }
-.angka { display: block; font-size: 2.5rem; font-weight: bold; font-family: 'Orbitron', sans-serif; color: #fff; }
-.label { font-size: 0.7rem; color: #8892b0; font-weight: bold; letter-spacing: 1px; }
-.btn-ig-besar { 
-    display: inline-block; padding: 15px 40px; 
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-    color: white; text-decoration: none; font-family: 'Orbitron', sans-serif; 
-    font-weight: bold; border-radius: 50px; font-size: 1rem; 
-    transition: 0.3s; box-shadow: 0 5px 15px rgba(220, 39, 67, 0.4);
-}
-.btn-ig-besar:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(220, 39, 67, 0.6); }
-
-/* 4. SISWA SECTION */
-#siswa { padding: 80px 0; background-color: #0b0f19; border-top: 1px solid #1c2538; }
-.judul-tengah { text-align: center; margin-bottom: 50px; padding: 0 20px; }
-.judul-tengah h2 { 
-    font-family: 'Orbitron', sans-serif; font-size: 2.2rem; color: #ffffff; 
-    letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase; 
-    text-shadow: 0 0 15px rgba(0, 243, 255, 0.6); 
-}
-.garis-neon { 
-    width: 100px; height: 4px; background: #d6249f; margin: 15px auto 0; 
-    border-radius: 5px; box-shadow: 0 0 10px #d6249f; 
-}
-.slider-wrapper { display: flex; align-items: center; position: relative; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
-.nav-btn { background: none; border: none; font-size: 3rem; color: #00f3ff; cursor: pointer; z-index: 10; transition: 0.3s; }
-.siswa-slider { display: flex; gap: 20px; overflow-x: auto; scroll-behavior: smooth; width: 100%; padding: 20px 5px; }
-.siswa-card { 
-    flex: 0 0 220px; background: #161b22; border-radius: 15px; text-align: center; 
-    padding: 30px 15px; border: 1px solid #233554; height: 360px; 
-    display: flex; flex-direction: column; align-items: center; transition: 0.3s; position: relative; overflow: hidden;
-}
-.img-box { width: 120px; height: 120px; margin: 0 auto 15px; border-radius: 50%; padding: 3px; border: 2px dashed #00f3ff; overflow: hidden; }
-.img-box img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
-.content-box { width: 100%; z-index: 2; position: relative; }
-.content-box h3 { color: #fff; font-weight: 600; font-size: 0.9rem; height: 50px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
-.btn-ig-small { display: inline-block; padding: 8px 25px; background: #0b0f19; color: #fff; border: 1px solid #00f3ff; border-radius: 20px; text-decoration: none; font-size: 0.8rem; transition: 0.3s; position: relative; z-index: 10; cursor: pointer; }
-
-/* 5. JADWAL PELAJARAN */
-#jadwal-page { padding: 40px 10px; background-color: #0b0f19; min-height: 100vh; }
-.sub-judul { color: #8892b0; font-size: 0.9rem; margin-bottom: 30px; display: block; text-align: center; }
-
-.jadwal-container { 
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-    gap: 25px; max-width: 1400px; margin: 0 auto; 
-}
-.hari-card { 
-    background: #161b22; border-radius: 12px; border: 1px solid #233554; 
-    overflow: hidden; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-}
-.hari-card:hover { border-color: #00f3ff; transform: translateY(-5px); }
-.hari-header { 
-    padding: 15px; text-align: center; font-family: 'Orbitron', sans-serif; 
-    font-weight: 800; color: #0b0f19; font-size: 1.2rem; letter-spacing: 2px;
-}
-.senin { background: #ff5f56; } .selasa { background: #ffbd2e; } .rabu { background: #27c93f; } .kamis { background: #00f3ff; } .jumat { background: #d6249f; }
-
-/* TABLE HEADER */
-.table-header {
-    display: grid;
-    grid-template-columns: 35px 95px 1fr; /* Kolom: No, Waktu, Mapel */
-    padding: 10px;
-    background: rgba(0,0,0,0.2);
-    font-size: 0.75rem;
-    color: #8892b0;
-    font-weight: bold;
-    text-align: center;
-    border-bottom: 1px solid #233554;
+.terminal-window {
+    width: 100%; max-width: 900px;
+    background-color: #0d1117; /* Warna gelap GitHub */
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0, 243, 255, 0.15); /* Glow biru tipis */
+    overflow: hidden;
+    font-family: 'Fira Code', 'Consolas', monospace; /* Font koding */
 }
 
-/* ISI JADWAL ITEM */
-.item { 
-    display: grid; 
-    grid-template-columns: 35px 95px 1fr; /* SAMA DENGAN HEADER */
-    align-items: center;
-    padding: 8px 10px; /* Padding diperkecil biar muat banyak */
-    border-bottom: 1px dashed #233554; 
+/* Header Terminal (Bar atas) */
+.terminal-header {
+    background: #161b22;
+    padding: 12px 15px;
+    border-bottom: 1px solid #30363d;
+    display: flex; align-items: center; position: relative;
 }
-.item:last-child { border-bottom: none; }
-
-.no-jam {
-    text-align: center; color: #8892b0; font-weight: bold; font-family: 'Orbitron', sans-serif; font-size: 0.8rem;
-}
-.waktu { 
-    text-align: center; color: #00f3ff; font-family: 'Consolas', monospace; 
-    font-size: 0.8rem; background: rgba(0, 243, 255, 0.1); 
-    padding: 2px 0; border-radius: 4px;
-}
-.mapel { color: #fff; font-weight: 600; text-align: right; font-size: 0.85rem; padding-left: 5px; }
-
-/* ISTIRAHAT & KEGIATAN KHUSUS */
-.item.istirahat { 
-    display: flex; justify-content: center; 
-    background: rgba(255, 189, 46, 0.15); 
-    padding: 8px; border-bottom: 1px solid #233554;
-}
-.text-istirahat {
-    color: #ffbd2e; font-weight: 800; font-style: normal; 
-    font-family: 'Orbitron', sans-serif; font-size: 0.8rem; letter-spacing: 1px;
+.buttons { display: flex; gap: 8px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+.terminal-title {
+    position: absolute; left: 0; right: 0; text-align: center;
+    color: #8b949e; font-size: 0.85rem; font-family: sans-serif;
 }
 
-/* 6. GALERI & FOOTER */
-#galeri { padding: 50px 0; background: #0b0f19; overflow: hidden; border-top: 1px solid #1c2538; }
-.btn-upload { display: inline-block; margin-top: 15px; padding: 8px 25px; border: 1px solid #ffbd2e; color: #ffbd2e; text-decoration: none; border-radius: 20px; font-size: 0.9rem; transition: 0.3s; }
-.marquee-container { margin-top: 40px; width: 100%; overflow: hidden; padding: 30px 0; background: rgba(255, 255, 255, 0.02); border-top: 1px solid #233554; border-bottom: 1px solid #233554; }
-.marquee-content { display: flex; gap: 20px; width: max-content; animation: scrollLeft 40s linear infinite; }
-@keyframes scrollLeft { to { transform: translateX(-50%); } }
-.photo-card { width: 300px; height: 200px; flex-shrink: 0; border-radius: 10px; overflow: hidden; border: 2px solid #233554; }
-.photo-card img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(40%) contrast(110%) brightness(0.8); transition: 0.5s; }
-footer { background-color: #05080f; padding: 50px 20px; margin-top: 0; text-align: center; border-top: 1px solid #1c2538; }
-.footer-content h3 { color: #00f3ff; font-family: 'Orbitron', sans-serif; margin-bottom: 10px; font-size: 1.5rem; }
-.footer-content p { color: #8892b0; margin-bottom: 20px; }
-.footer-icon { color: #fff; display: inline-block; }
+/* Isi Terminal */
+.terminal-body {
+    padding: 25px;
+    color: #c9d1d9; /* Warna teks standar */
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
 
+/* Elemen Teks */
+.path { color: #8892b0; font-size: 0.9rem; margin-bottom: 5px; display: block;}
+.prompt { color: #27c93f; font-weight: bold; } /* Hijau */
+.cmd { color: #fff; }
+
+.output-section { margin-top: 25px; margin-bottom: 10px; }
+.neon-text { 
+    color: #00f3ff; /* Cyan Terang */
+    font-weight: bold; margin-bottom: 8px; font-size: 1rem;
+    text-shadow: 0 0 5px rgba(0, 243, 255, 0.4);
+}
+.desc-text { color: #e6edf3; }
+
+/* List Atribut */
+.attr-list { list-style: none; padding-left: 0; }
+.attr-list li { margin-bottom: 8px; display: flex; flex-wrap: wrap;}
+.key { color: #ffbd2e; font-weight: bold; } /* Kuning Emas */
+.sep { margin: 0 10px; color: #8b949e; }
+.val { color: #fff; }
+
+.target-text { color: #79c0ff; font-weight: bold; margin-bottom: 5px; } /* Biru muda */
+.quote-italic { color: #8b949e; font-style: italic; border-left: 3px solid #30363d; padding-left: 10px; }
+
+/* Animasi Kursor */
+.cursor {
+    display: inline-block; width: 10px; height: 18px; background: #c9d1d9;
+    animation: blink 1s infinite; vertical-align: middle; margin-left: 5px;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* Responsif di HP */
 @media (max-width: 768px) {
-    nav .menu-container { flex-wrap: wrap !important; justify-content: center !important; gap: 8px !important; }
-    .btn-3d { flex: 1 1 40% !important; margin: 0 !important; font-size: 0.75rem !important; }
-    #home h1 { font-size: 1.8rem; }
-    .judul-tengah h2 { font-size: 1.6rem; }
-    .table-header { font-size: 0.7rem; } 
-    .waktu { font-size: 0.75rem; }
+    .terminal-body { padding: 15px; font-size: 0.85rem; }
+    .attr-list li { display: block; } /* Turun baris di HP */
+    .sep { display: none; } /* Hilangkan titik dua di HP biar rapi */
+    .key { display: block; margin-bottom: 2px; }
 }
