@@ -3,162 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Kelas - XII A Wahabita '39</title>
+    <title>Profil Kelas - XII A</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;600&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
-        /* CSS KHUSUS PROFIL LENGKAP */
+        /* CSS TAMBAHAN KHUSUS HALAMAN INI */
         .profil-layout {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            padding-bottom: 50px;
+            display: flex; flex-direction: column; gap: 60px; padding-bottom: 50px;
         }
 
-        /* 1. Terminal Deskripsi */
-        .terminal-full {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* 2. Section Guru (The Big Three) */
-        .mentor-section {
-            text-align: center;
-            margin-top: 20px;
-        }
+        /* --- 2. GURU SECTION (THE BIG THREE) --- */
+        .mentor-section { text-align: center; margin-top: 20px; }
         
         .mentor-title {
-            font-family: 'Orbitron', sans-serif;
-            color: #fff;
-            margin-bottom: 40px;
-            font-size: 1.5rem;
-            letter-spacing: 2px;
+            font-family: 'Orbitron', sans-serif; color: #fff; margin-bottom: 40px;
+            font-size: 1.5rem; letter-spacing: 2px;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-            border-bottom: 2px solid #233554;
-            display: inline-block;
-            padding-bottom: 10px;
+            border-bottom: 2px solid #233554; display: inline-block; padding-bottom: 10px;
         }
 
         .mentor-grid {
-            display: flex;
-            justify-content: center;
-            align-items: stretch; /* Biar tingginya sejajar */
-            gap: 20px;
-            flex-wrap: wrap;
+            display: flex; justify-content: center; align-items: stretch;
+            gap: 25px; flex-wrap: wrap;
         }
 
         .mentor-card {
-            background: rgba(11, 15, 25, 0.9);
-            border: 1px solid #233554;
-            border-radius: 15px;
-            padding: 25px;
-            width: 320px; /* Lebar kartu */
-            transition: 0.3s;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background: rgba(11, 15, 25, 0.9); border: 1px solid #233554;
+            border-radius: 15px; padding: 25px; width: 320px;
+            transition: 0.3s; position: relative;
+            display: flex; flex-direction: column; align-items: center;
         }
+        .mentor-card:hover { transform: translateY(-10px); box-shadow: 0 0 20px rgba(0, 243, 255, 0.1); }
 
-        .mentor-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
-        }
-
-        /* --- WARNA KHUSUS TIAP KARTU --- */
-        /* Bu Sri (Hijau - Biologi/Alam) */
+        /* WARNA KHUSUS */
         .card-11 { border-top: 4px solid #4ecdc4; }
         .bg-11 { background: rgba(78, 205, 196, 0.2); color: #4ecdc4; }
 
-        /* Bu Ika (Emas - Utama) */
         .card-12 { border-top: 4px solid #ffbd2e; border-bottom: 1px solid #ffbd2e; transform: scale(1.05); z-index: 5; box-shadow: 0 0 15px rgba(255,189,46,0.1); }
         .bg-12 { background: rgba(255, 189, 46, 0.2); color: #ffbd2e; }
 
-        /* Pak Topari (Biru Neon - Tech) */
         .card-it { border-top: 4px solid #00f3ff; }
         .bg-it { background: rgba(0, 243, 255, 0.2); color: #00f3ff; }
 
-        /* --- KONTEN KARTU --- */
         .img-guru-circle {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #233554;
-            margin-bottom: 15px;
-            padding: 3px;
+            width: 130px; height: 130px; border-radius: 50%; object-fit: cover;
+            border: 3px solid #233554; margin-bottom: 15px; padding: 3px;
         }
 
         .badge-role {
-            display: inline-block;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            display: inline-block; padding: 5px 12px; border-radius: 20px;
+            font-size: 0.7rem; font-weight: bold; margin-bottom: 15px;
+            text-transform: uppercase; letter-spacing: 1px;
         }
 
         .guru-name { color: #fff; font-size: 1.2rem; margin-bottom: 5px; font-weight: bold; }
         .guru-jabatan { color: #8892b0; font-size: 0.85rem; margin-bottom: 15px; font-style: italic; }
         
         .quote-box {
-            background: rgba(255,255,255,0.05);
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            color: #ccd6f6;
-            font-style: italic;
-            margin-bottom: 15px;
-            width: 100%;
+            background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px;
+            font-size: 0.85rem; color: #ccd6f6; font-style: italic;
+            margin-bottom: 15px; width: 100%;
         }
 
-        /* List Skill Pak Topari */
         .skill-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px;
-            margin-bottom: 15px;
+            list-style: none; padding: 0; display: flex; flex-wrap: wrap;
+            justify-content: center; gap: 5px; margin-bottom: 15px;
         }
         .skill-tag {
-            background: #0d1117;
-            border: 1px solid #233554;
-            color: #00f3ff;
-            font-size: 0.7rem;
-            padding: 3px 8px;
-            border-radius: 5px;
+            background: #0d1117; border: 1px solid #233554; color: #00f3ff;
+            font-size: 0.7rem; padding: 3px 8px; border-radius: 5px;
         }
 
-        /* Tombol Sosmed */
-        .btn-sosmed {
-            margin-top: auto; /* Dorong ke bawah */
-            display: flex;
-            gap: 10px;
-        }
+        .btn-sosmed { margin-top: auto; display: flex; gap: 10px; }
         .link-guru {
-            text-decoration: none;
-            color: #fff;
-            background: #233554;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            transition: 0.3s;
-            font-weight: bold;
+            text-decoration: none; color: #fff; background: #233554;
+            padding: 8px 15px; border-radius: 5px; font-size: 0.8rem;
+            transition: 0.3s; font-weight: bold;
         }
         .link-guru:hover { background: #fff !important; color: #000 !important; }
 
-        /* Responsif HP */
         @media (max-width: 768px) {
             .card-12 { transform: scale(1); border-bottom: none; }
             .mentor-grid { flex-direction: column; align-items: center; }
         }
-
     </style>
 </head>
 <body>
@@ -174,42 +102,47 @@
         </div>
     </nav>
 
-    <section id="profil" style="min-height: 100vh; padding-top: 50px;">
-        
+    <section id="profil-page">
         <div class="judul-tengah">
             <h2>SYSTEM PROFILE</h2>
             <div class="garis-neon"></div>
         </div>
 
-        <div class="container-profil profil-layout">
+        <div class="profil-layout">
             
-            <div class="terminal-full">
+            <div class="terminal-container">
                 <div class="terminal-window">
                     <div class="terminal-header">
                         <div class="buttons">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
+                            <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
                         </div>
-                        <span class="terminal-title">root@wahabita39:~/class_description</span>
+                        <div class="terminal-title">root@wahabita39:~/class_description</div>
                     </div>
                     <div class="terminal-body">
-                        <p class="cmd">C:\> run description.exe</p>
-                        <div class="typing-text">
-                            <p class="highlight"><strong>>> XII A WAHABITA '39 (MIPA-INFORMATIKA)</strong></p>
-                            <p>Bukan sekadar kelas, tapi sebuah ekosistem unik. Kecerdasan akademis MIPA bertemu ketangkasan Informatika, dibalut kekeluargaan.</p>
-                            <br>
-                            <p class="highlight"><strong>>> SYSTEM ATTRIBUTES:</strong></p>
-                            <ul class="list-terminal">
-                                <li><strong>[AKTIVIS]</strong> : Markas punggawa (OSIS, DA, Rohis) dan Panitia Event Siswa.</li>
-                                <li><strong>[KREATIF]</strong> : Santai, Solid, Kocak, & "Out of the Box".</li>
-                                <li><strong>[DISKUSI]</strong> : Forum debat teori konspirasi & masa depan.</li>
-                            </ul>
-                            <br>
-                            <p class="highlight"><strong>>> FUTURE TARGET:</strong></p>
-                            <p>Sukses PTN, PTS, Kedinasan, & Profesional.<br><em>"Hari ini berdiskusi, besok beraksi, masa depan menginspirasi."</em></p>
-                            <br><span class="cursor">_</span>
+                        <div class="line"><span class="path">root@wahabita39:~/class_description</span></div>
+                        <div class="line"><span class="prompt">C:\></span> <span class="cmd">run description.exe</span></div>
+                        
+                        <div class="output-section">
+                            <h3 class="neon-text">>> XII A WAHABITA '39 (MIPA-INFORMATIKA)</h3>
+                            <p class="desc-text">Bukan sekadar kelas, tapi sebuah ekosistem unik. Kecerdasan akademis MIPA bertemu ketangkasan Informatika, dibalut kekeluargaan.</p>
                         </div>
+
+                        <div class="output-section">
+                            <h3 class="neon-text">>> SYSTEM ATTRIBUTES:</h3>
+                            <ul class="attr-list">
+                                <li><span class="key">[AKTIVIS]</span> <span class="sep">:</span> <span class="val">Markas punggawa (OSIS, DA, Rohis) dan Panitia Event Siswa.</span></li>
+                                <li><span class="key">[KREATIF]</span> <span class="sep">:</span> <span class="val">Santai, Solid, Kocak, & "Out of the Box".</span></li>
+                                <li><span class="key">[DISKUSI]</span> <span class="sep">:</span> <span class="val">Forum debat teori konspirasi & masa depan.</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="output-section">
+                            <h3 class="neon-text">>> FUTURE TARGET:</h3>
+                            <p class="target-text">Sukses PTN, PTS, Kedinasan, & Profesional.</p>
+                            <p class="quote-italic">"Hari ini berdiskusi, besok beraksi, masa depan menginspirasi."</p>
+                        </div>
+
+                        <div class="line"><span class="prompt">C:\></span> <span class="cursor">_</span></div>
                     </div>
                 </div>
             </div>
@@ -222,14 +155,9 @@
                     <div class="mentor-card card-11">
                         <span class="badge-role bg-11">WALI KELAS XI A (24/25)</span>
                         <img src="img/wali11.jpeg" alt="Sri Suharyanti" class="img-guru-circle" style="border-color: #4ecdc4;">
-                        
                         <h4 class="guru-name">Sri Suharyanti, S. Pd</h4>
                         <p class="guru-jabatan">Mapel Biologi & Pembina OSIS</p>
-                        
-                        <div class="quote-box">
-                            "Bekerja Dengan Hati, Sepenuh Hati, Hati-hati dan Tidak Sesuka Hati."
-                        </div>
-                        
+                        <div class="quote-box">"Bekerja Dengan Hati, Sepenuh Hati, Hati-hati dan Tidak Sesuka Hati."</div>
                         <div class="btn-sosmed">
                             <a href="https://www.instagram.com/suharyanti167?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="link-guru" style="background:#4ecdc4; color:#000;">Instagram</a>
                         </div>
@@ -238,14 +166,9 @@
                     <div class="mentor-card card-12">
                         <span class="badge-role bg-12">WALI KELAS XII A (25/26)</span>
                         <img src="img/guru.jpeg" alt="Ika Riyandari" class="img-guru-circle" style="border-color: #ffbd2e;">
-                        
                         <h4 class="guru-name" style="color:#ffbd2e;">Ika Riyandari, S.Pd.I.</h4>
                         <p class="guru-jabatan">Mapel PAI & Pembina OSIS</p>
-                        
-                        <div class="quote-box" style="background: rgba(255, 189, 46, 0.1); color:#ffbd2e;">
-                            "Keseimbangan antara ilmu duniawi dan budi pekerti adalah kunci karakter sejati."
-                        </div>
-                        
+                        <div class="quote-box" style="background: rgba(255, 189, 46, 0.1); color:#ffbd2e;">"Keseimbangan antara ilmu duniawi dan budi pekerti adalah kunci karakter sejati."</div>
                         <div class="btn-sosmed">
                             <a href="https://www.instagram.com/ikariyandari?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="link-guru" style="background:#ffbd2e; color:#000;">Instagram</a>
                         </div>
@@ -254,17 +177,12 @@
                     <div class="mentor-card card-it">
                         <span class="badge-role bg-it">GURU MAPEL LANJUT</span>
                         <img src="img/paktop.jpeg" alt="Topari" class="img-guru-circle" style="border-color: #00f3ff;">
-                        
                         <h4 class="guru-name">Topari, S. T</h4>
                         <p class="guru-jabatan">Informatika & Waka Kurikulum</p>
-                        
                         <ul class="skill-list">
-                            <li class="skill-tag">ICT Teacher</li>
-                            <li class="skill-tag">Writer</li>
-                            <li class="skill-tag">Trainer</li>
-                            <li class="skill-tag">Founder EdukreaTIK</li>
+                            <li class="skill-tag">ICT Teacher</li><li class="skill-tag">Writer</li>
+                            <li class="skill-tag">Trainer</li><li class="skill-tag">Founder EdukreaTIK</li>
                         </ul>
-                        
                         <div class="btn-sosmed">
                             <a href="https://www.instagram.com/patopari?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="link-guru" style="background:#00f3ff; color:#000;">Instagram</a>
                             <a href="https://sites.google.com/view/paktop" target="_blank" class="link-guru">Website</a>
@@ -288,5 +206,4 @@
     </footer>
 
 </body>
-
 </html>
