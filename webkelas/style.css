@@ -1,83 +1,135 @@
-/* 6. JADWAL PELAJARAN (VERSI FLEXBOX RAPI & TEGAK) */
-#jadwal-page { padding: 40px 10px; background-color: #0b0f19; min-height: 100vh; }
-.sub-judul { color: #8892b0; font-size: 0.9rem; margin-bottom: 30px; display: block; text-align: center; }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Pelajaran - XII A</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-.jadwal-container { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 25px; 
-    max-width: 1300px; 
-    margin: 0 auto; 
-}
+    <nav>
+        <div class="menu-container">
+            <a href="index.html" class="btn-3d">HOME</a>
+            <a href="index.html#siswa" class="btn-3d">SISWA</a>
+            <a href="profil.html" class="btn-3d">PROFIL KELAS</a>
+            <a href="jadwal.html" class="btn-3d active">JADWAL PELAJARAN</a>
+            <a href="piket.html" class="btn-3d">JADWAL PIKET</a>
+            <a href="info.html" class="btn-3d">INFORMASI PENTING</a>
+        </div>
+    </nav>
 
-.hari-card { 
-    background: #161b22; 
-    border-radius: 12px; 
-    border: 1px solid #233554; 
-    overflow: hidden; 
-    transition: 0.3s; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-}
-.hari-card:hover { border-color: #00f3ff; transform: translateY(-5px); }
+    <section id="jadwal-page">
+        <div class="judul-tengah">
+            <h2>JADWAL PELAJARAN</h2>
+            <div class="garis-neon"></div>
+            <span class="sub-judul">Semester Genap Tahun Ajaran 2024/2025</span>
+        </div>
 
-.hari-header { 
-    padding: 15px; 
-    text-align: center; 
-    font-family: 'Orbitron', sans-serif; 
-    font-weight: 800; 
-    color: #0b0f19; 
-    font-size: 1.2rem; 
-    letter-spacing: 2px;
-    border-bottom: 2px solid rgba(0,0,0,0.2);
-}
+        <div class="jadwal-container">
 
-/* WARNA HEADER */
-.senin { background: #ff5f56; } 
-.selasa { background: #ffbd2e; } 
-.rabu { background: #27c93f; } 
-.kamis { background: #00f3ff; } 
-.jumat { background: #d6249f; }
+            <div class="hari-card">
+                <div class="hari-header senin">SENIN</div>
+                
+                <div class="item">
+                    <span class="waktu">07.00 - 07.40</span>
+                    <span class="mapel">Upacara Bendera</span>
+                </div>
+                <div class="item">
+                    <span class="waktu">07.40 - 08.20</span>
+                    <span class="mapel">PJOK</span>
+                </div>
+                <div class="item">
+                    <span class="waktu">08.20 - 09.00</span>
+                    <span class="mapel">PJOK</span>
+                </div>
 
-/* ISI JADWAL (ITEM) */
-.item { 
-    display: flex; 
-    justify-content: space-between; /* Kiri Kanan Mentok */
-    align-items: center;
-    padding: 12px 15px; 
-    border-bottom: 1px dashed #233554; 
-}
-.item:last-child { border-bottom: none; }
+                <div class="item istirahat">
+                    <span class="text-istirahat">ISTIRAHAT I (09.00 - 09.30)</span>
+                </div>
 
-.waktu { 
-    color: #00f3ff; 
-    font-family: 'Consolas', monospace; 
-    font-size: 0.9rem; 
-    background: rgba(0, 243, 255, 0.1);
-    padding: 2px 6px;
-    border-radius: 4px;
-}
+                <div class="item">
+                    <span class="waktu">09.30 - 10.10</span>
+                    <span class="mapel">Sejarah</span>
+                </div>
+                <div class="item">
+                    <span class="waktu">10.10 - 10.50</span>
+                    <span class="mapel">Sejarah</span>
+                </div>
+                <div class="item">
+                    <span class="waktu">10.50 - 11.30</span>
+                    <span class="mapel">Bahasa Inggris</span>
+                </div>
 
-.mapel { 
-    color: #fff; 
-    font-weight: 700; /* TEBAL */
-    text-align: right; 
-    font-size: 0.95rem;
-}
+                <div class="item istirahat">
+                    <span class="text-istirahat">ISTIRAHAT II (11.30 - 12.20)</span>
+                </div>
 
-/* KHUSUS ISTIRAHAT (TEGAK & TENGAH) */
-.item.istirahat { 
-    background: rgba(255, 189, 46, 0.15); /* Kuning Redup */
-    justify-content: center; 
-    padding: 10px;
-    border-bottom: 1px solid #233554;
-}
+                <div class="item">
+                    <span class="waktu">12.20 - 13.00</span>
+                    <span class="mapel">Biologi</span>
+                </div>
+            </div>
 
-.text-istirahat {
-    color: #ffbd2e; 
-    font-weight: 800; /* Sangat Tebal */
-    font-style: normal; /* WAJIB: BIAR TIDAK MIRING */
-    font-family: 'Orbitron', sans-serif;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+            <div class="hari-card">
+                <div class="hari-header selasa">SELASA</div>
+                <div class="item"><span class="waktu">07.00 - 07.40</span><span class="mapel">Matematika</span></div>
+                <div class="item"><span class="waktu">07.40 - 08.20</span><span class="mapel">Bahasa Indonesia</span></div>
+                <div class="item"><span class="waktu">08.20 - 09.00</span><span class="mapel">Bahasa Indonesia</span></div>
+                
+                <div class="item istirahat"><span class="text-istirahat">ISTIRAHAT I</span></div>
+                
+                <div class="item"><span class="waktu">09.30 - 10.10</span><span class="mapel">Bahasa Indonesia</span></div>
+                <div class="item"><span class="waktu">10.10 - 10.50</span><span class="mapel">Biologi</span></div>
+                <div class="item"><span class="waktu">10.50 - 11.30</span><span class="mapel">Biologi</span></div>
+                
+                <div class="item istirahat"><span class="text-istirahat">ISTIRAHAT II</span></div>
+                
+                <div class="item"><span class="waktu">12.20 - 13.00</span><span class="mapel">Biologi</span></div>
+            </div>
+
+            <div class="hari-card">
+                <div class="hari-header rabu">RABU</div>
+                <div class="item"><span class="waktu">07.00 - 07.40</span><span class="mapel">Matematika</span></div>
+                <div class="item"><span class="waktu">07.40 - 08.20</span><span class="mapel">Matematika</span></div>
+                <div class="item"><span class="waktu">08.20 - 09.00</span><span class="mapel">Seni Budaya</span></div>
+                
+                <div class="item istirahat"><span class="text-istirahat">ISTIRAHAT I</span></div>
+                
+                <div class="item"><span class="waktu">09.30 - 10.10</span><span class="mapel">Seni Budaya</span></div>
+                <div class="item"><span class="waktu">10.10 - 10.50</span><span class="mapel">Informatika</span></div>
+                <div class="item"><span class="waktu">10.50 - 11.30</span><span class="mapel">Informatika</span></div>
+                
+                <div class="item istirahat"><span class="text-istirahat">ISTIRAHAT II</span></div>
+                
+                <div class="item"><span class="waktu">12.20 - 13.00</span><span class="mapel">Bahasa Inggris</span></div>
+            </div>
+
+            <div class="hari-card">
+                <div class="hari-header kamis">KAMIS</div>
+                <div class="item"><span class="waktu">07.00 - 07.40</span><span class="mapel">Kimia</span></div>
+                <div class="item"><span class="waktu">07.40 - 08.20</span><span class="mapel">Kimia</span></div>
+                <div class="item"><span class="waktu">08.20 - 09.00</span><span class="mapel">Informatika</span></div>
+                
+                <div class="item istirahat"><span class="text-istirahat">ISTIRAHAT I</span></div>
+                
+                <div class="item"><span class="waktu">09.30 - 10.10</span><span class="mapel">Informatika</span></div>
+                <div class="item"><span class="waktu">10.10 - 10.50</span><span class="mapel">Informatika</span></div>
+                <div class="item"><span class="waktu">10.50 - 11.30</span><span class="mapel">Fisika</span></div>
+                
+                <div class="item istirahat"><span class="text-istirahat">ISTIRAHAT II</span></div>
+                
+                <div class="item"><span class="waktu">12.20 - 13.00</span><span class="mapel">Fisika</span></div>
+            </div>
+
+            <div class="hari-card">
+                <div class="hari-header jumat">JUMAT</div>
+                <div class="item"><span class="waktu">07.00 - ...</span><span class="mapel">...</span></div>
+                </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
